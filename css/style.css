@@ -1,0 +1,181 @@
+/* ===================================
+   RESET DASAR & FONT
+   =================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+}
+
+body {
+    background-color: #5ed1ab; 
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px; 
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* ===================================
+   FORM INPUT
+   =================================== */
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#todo-input, #date-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#add-button {
+    padding: 10px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#add-button:hover {
+    background-color: #0056b3;
+}
+
+#validation-message {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ===================================
+   FILTER CONTROL
+   =================================== */
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-top: 1px dashed #ddd;
+}
+
+#filter-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* ===================================
+   TO-DO LIST
+   =================================== */
+#todo-list {
+    list-style: none; 
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #ffc107; 
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Styling untuk tugas yang SUDAH SELESAI */
+.todo-item.completed {
+    border-left: 5px solid #28a745; 
+    background-color: #e9f5e9;
+    opacity: 0.7;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through; 
+    color: #6c757d;
+}
+
+.todo-text {
+    flex-grow: 1; 
+    font-weight: 500;
+}
+
+.todo-date {
+    margin-left: 10px;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+    margin-left: 15px;
+}
+
+.complete-btn, .delete-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.complete-btn {
+    background-color: #28a745; 
+    color: white;
+}
+
+.complete-btn:hover {
+    background-color: #1e7e34;
+}
+
+.delete-btn {
+    background-color: #dc3545; 
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Styling khusus untuk tombol 'Batalkan' saat tugas sudah selesai */
+.todo-item.completed .complete-btn {
+    background-color: #ffc107; 
+}
+.todo-item.completed .complete-btn:hover {
+    background-color: #e0a800;
+}
